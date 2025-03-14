@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+    <!-- 其他头信息 -->
+    <!-- 需要引入csss -->
+    <link rel="stylesheet" href="/assets/css/bar.css">
+    <link rel="stylesheet" href="/assets/css/profile.css">
+</head>
+
+<body>
+    <!-- 容器元素 -->
+    <div id="header-container"></div>
+
+    <!-- 页面特定的内容修改 -->
+    <main>
+        <div id="profile">
+            <h1>用户信息</h1>
+            <div id="customerInfo">
+                <p><strong>用户名:</strong> <span id="name"></span></p>
+                <p><strong>邮箱:</strong> <span id="email"></span></p>
+                <p><strong>地址:</strong> <span id="address"></span></p>
+                <p><strong>电话:</strong> <span id="phonenumber"></span></p>
+            </div>
+            <div class="button-group">
+                <button class="action-button" onclick="editInfo()">修改信息</button>
+                <button class="action-button" onclick="confirmLogout()">注销</button>
+            </div>
+
+            <!-- 修改信息弹窗 -->
+            <div id="editModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <form id="editForm">
+                        <label for="editName">用户名:</label>
+                        <input type="text" id="editName" placeholder="用户名" required>
+
+                        <label for="editEmail">邮箱:</label>
+                        <input type="email" id="editEmail" placeholder="邮箱" required>
+
+                        <label for="editAddress">地址:</label>
+                        <input type="text" id="editAddress" placeholder="地址" required>
+
+                        <label for="editPhonenumber">电话:</label>
+                        <input type="tel" id="editPhonenumber" placeholder="电话" required>
+
+                        <button type="button" class="submit-button" onclick="submitEdit()">提交更改</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 注销确认弹窗 -->
+            <div id="logoutModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <p>确定要注销吗？</p>
+                    <button class="submit-button" onclick="logout()">是</button>
+                    <button class="cancel-button" onclick="closeModal()">否</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- 必须保留 -->
+    <script src="/assets/js/public.js"></script>
+    <script src="/assets/js/profile.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("loading begin");
+            loadHeaderAndWelcome(); // 调用外部 JS 文件中的函数
+            loadCustomerInfo();
+        });
+    </script>
+
+</body>
+
+</html>

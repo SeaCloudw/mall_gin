@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城购物界面</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/bar.css">
+</head>
+
+<body>
+    <!-- Logo -->
+    <header class="logo-section">
+        <div class="logo">
+            <a href="/mall_gin"><img src="/assets/images/logo.png" alt="商城Logo"></a>
+        </div>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="请输入关键词..." class="search-input">
+            <button type="button" class="search-button">搜 索</button>
+        </div>
+
+        <div class="welcome-message"></div> <!-- 新增：用于显示欢迎信息 -->
+
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index">商品明细</a></li>
+            <!-- <li><a href="/categories">分类明细</a></li> -->
+            <li><a href="/cart">我的购物车</a></li>
+            <li><a href="/orders">我的订单</a></li>
+            <li><a href="/profile">个人中心</a></li>
+        </ul>
+    </nav>
+    <!-- Main Content Area -->
+    <main>
+        <section id="product-list">
+            <h2>商品列表</h2>
+            <div id="products"></div>
+            <div id="pagination"></div>
+        </section>
+    </main>
+
+    <!-- Modal for Add to Cart or Buy Now -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title"></h3>
+            <input type="hidden" id="product-id" />
+            <p><strong>单价:</strong> <span id="modal-unit-price"></span></p>
+            <div class="form-group">
+                <label for="quantity">数量:</label>
+                <input type="number" id="quantity" min="1" class="input-field">
+            </div>
+            <div class="form-group">
+                <label for="address">地址:</label>
+                <input type="text" id="address" class="input-field">
+            </div>
+            <div class="button-group">
+                <button id="add-to-cart-btn" class="action-button">加入购物车</button>
+                <button id="buy-now-btn" class="action-button">立刻下单</button>
+            </div>
+            <!--             <div class="button-group">
+                <button id="add-to-cart-btn" data-product-id="${product.product_id}">加入购物车</button>
+                <button id="buy-now-btn" data-product-id="${product.product_id}" data-is-buy-now="true">立刻下单</button>
+            </div> -->
+        </div>
+
+        <script src="/assets/js/index.js"></script>
+</body>
+
+</html>

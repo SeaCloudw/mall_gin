@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的购物车</title>
+    <!-- 其他头信息 -->
+    <!-- 需要引入csss -->
+    <link rel="stylesheet" href="/assets/css/bar.css">
+    <link rel="stylesheet" href="/assets/css/cart.css">
+</head>
+
+<body>
+    <!-- 容器元素 -->
+    <div id="header-container"></div>
+
+    <!-- 页面特定的内容 -->
+    <main>
+        <h1>我的购物车</h1>
+        <div class="cart-container">
+            <div class="cart-header">
+                <div class="checkbox"></div>
+                <div class="product-name">商品名称</div>
+                <div class="product-description">商品说明</div>
+                <div class="product-price">单价</div>
+                <div class="product-quantity">数量</div>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- 商品将通过 JavaScript 动态插入这里 -->
+            </div>
+            <div class="cart-footer">
+                <button id="submit-order-btn" class="action-button" onclick="submitOrder()">提交订单</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- 必须保留 -->
+    <script src="/assets/js/public.js" defer></script>
+    <script src="/assets/js/cart.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("loading begin");
+            loadHeaderAndWelcome(); // 调用外部 JS 文件中的函数
+            validate_get('/protect');
+            loadCartItems();// 假设你有一个函数来加载购物车内容
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
