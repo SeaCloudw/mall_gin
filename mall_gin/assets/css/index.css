@@ -1,0 +1,165 @@
+
+/* Main Content Area */
+main {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#product-list {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.product-item h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.product-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.product-item button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #80c1ff; /* Slightly darker but still light blue */
+    color: white;
+    border-radius: 4px;
+}
+
+.product-item button:hover {
+    background-color: #4da6ff; /* Even slightly darker */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #e6f7ff; /* Light blue background */
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #80c1ff; /* Light blue border */
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #4da6ff; /* Light blue close button color */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #1a8cff; /* Slightly darker on hover */
+    text-decoration: none;
+}
+
+.modal-content h3 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #4da6ff; /* Light blue heading color */
+}
+
+.modal-content p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-field:focus {
+    border-color: #80c1ff;
+    outline: none;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #80c1ff; /* Light blue button color */
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #4da6ff; /* Slightly darker on hover */
+}
+
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #80c1ff; /* Slightly darker but still light blue */
+    color: white;
+    border-radius: 4px;
+}
+
+#pagination button:hover {
+    background-color: #4da6ff; /* Even slightly darker */
+}

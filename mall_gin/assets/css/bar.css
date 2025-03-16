@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff; /* Light blue background */
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #cce5ff; /* Light blue color */
+}
+
+.logo img {
+    height: 70px; /* 增加Logo的高度 */
+}
+
+/* .search-box {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 500px;
+    margin-left: auto;
+     justify-content: space-between;
+} */
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 确保整个搜索框在父容器内水平居中 */
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 auto; /* 居中对齐 */
+    padding: 10px; /* 可选：增加一些内边距以改善外观 */
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box; /* 确保padding不会影响宽度 */
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #80c1ff; /* Light blue button color */
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 40px; /* 调整固定高度以匹配输入框的高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 确保文本在按钮内水平居中 */
+    font-size: 14px;
+    box-sizing: border-box; /* 确保padding不会影响高度 */
+}
+
+.search-button:hover {
+    background-color: #4da6ff; /* Slightly darker on hover */
+}
+/* Navigation Bar */
+.navbar {
+    background-color: #38638b; /* Slightly darker but still light blue */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+/* 美化 .welcome-message */
+.welcome-message {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: flex-end; /* 水平靠右对齐 */
+    padding: 10px 20px; /* 内边距 */
+    /* margin-left: auto; 推动元素到右侧 */
+    /* background-color: #f8f9fa; 背景颜色 */
+    color: #343a40; /* 文字颜色 */
+    font-size: 16px; /* 字体大小 */
+    border-radius: 5px; /* 圆角 */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); 阴影效果 */
+}
